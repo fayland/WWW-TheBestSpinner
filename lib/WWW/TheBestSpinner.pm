@@ -61,14 +61,14 @@ sub rewriteText {
 }
 
 sub rewriteSentences {
-	my ($self, $text) = @_;
+    my ($self, $text) = @_;
     $self->_send_request('rewriteSentences', [
        text => $text,
     ]);
 }
 
 sub randomSpin {
-	my ($self, $text) = @_;
+    my ($self, $text) = @_;
     $self->_send_request('randomSpin', [
        text => $text,
     ]);
@@ -94,7 +94,7 @@ sub replaceEveryonesFavorites {
 }
 
 sub textCompareUniqueness {
-	my ($self, $text1, $text2) = @_;
+    my ($self, $text1, $text2) = @_;
     $self->_send_request('textCompareUniqueness', [
        text1 => $text1,
        text2 => $text2,
@@ -102,7 +102,7 @@ sub textCompareUniqueness {
 }
 
 sub textCompare {
-	my ($self, $text1, $text2) = @_;
+    my ($self, $text1, $text2) = @_;
     $self->_send_request('textCompare', [
        text1 => $text1,
        text2 => $text2,
@@ -151,18 +151,18 @@ WWW::TheBestSpinner - TheBestSpinner API
 
 =head1 SYNOPSIS
 
-  	use WWW::TheBestSpinner;
+    use WWW::TheBestSpinner;
 
-	my $tbs = WWW::TheBestSpinner->new(
-	    username => 'example@mail.com',
-	    password => 'mypassword',
-	);
+    my $tbs = WWW::TheBestSpinner->new(
+        username => 'example@mail.com',
+        password => 'mypassword',
+    );
 
-	my $quota_left = $tbs->apiQueries or die $tbs->errstr;
-	print "quota_left: $quota_left\n";
+    my $quota_left = $tbs->apiQueries or die $tbs->errstr;
+    print "quota_left: $quota_left\n";
 
-	my $spin_text = $tbs->replaceEveryonesFavorites($original_text, 10, 3) or die $tbs->errstr;
-	print $spin_text . "\n";
+    my $spin_text = $tbs->replaceEveryonesFavorites($original_text, 10, 3) or die $tbs->errstr;
+    print $spin_text . "\n";
 
 =head1 DESCRIPTION
 
@@ -170,35 +170,35 @@ WWW::TheBestSpinner is for L<http://thebestspinner.com/?action=api_info> (requir
 
 =head2 replaceEveryonesFavorites
 
-	$tbs->replaceEveryonesFavorites($text, $maxsyns, $quality, $protectedterms);
+    $tbs->replaceEveryonesFavorites($text, $maxsyns, $quality, $protectedterms);
 
 =head2 rewriteText
 
-	$tbs->rewriteText($text, $protectedterms)
+    $tbs->rewriteText($text, $protectedterms)
 
 =head2 identifySynonyms
 
-	$tbs->identifySynonyms($text, $maxsyns, $protectedterms)
+    $tbs->identifySynonyms($text, $maxsyns, $protectedterms)
 
 =head2 rewriteSentences
 
-	$tbs->rewriteSentences($text)
+    $tbs->rewriteSentences($text)
 
 =head2 randomSpin
 
-	$tbs->randomSpin($text);
+    $tbs->randomSpin($text);
 
 =head2 textCompareUniqueness
 
-	$tbs->textCompareUniqueness($text1, $text2)
+    $tbs->textCompareUniqueness($text1, $text2)
 
 =head2 textCompare
 
-	$tbs->textCompare($text1, $text2)
+    $tbs->textCompare($text1, $text2)
 
 =head2 apiQueries
 
-	$tbs->apiQueries()
+    $tbs->apiQueries()
 
 =head1 AUTHOR
 
