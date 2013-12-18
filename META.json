@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "TheBestSpinner API",
    "author" : [
       "Fayland Lam <fayland@gmail.com>"
    ],
@@ -36,6 +36,9 @@
       },
       "runtime" : {
          "requires" : {
+            "LWP::UserAgent" : "0",
+            "MIME::Base64" : "0",
+            "PHP::Serialization" : "0",
             "perl" : "5.008005"
          }
       },
